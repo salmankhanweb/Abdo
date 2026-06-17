@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdo Flooring & Concrete | Premium Structural Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            DEFAULT: '#D4AF37',
+                            light: '#F3E5AB',
+                            dark: '#AA7C11'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Modern Scroll Reveal CSS */
+        .reveal {
+            position: relative;
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Smooth Glow and Border Hover Effects */
+        .service-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .service-card:hover {
+            box-shadow: 0 0 30px 5px rgba(212, 175, 55, 0.2);
+            border-color: #D4AF37;
+            transform: translateY(-6px);
+        }
+
+        .icon-rotate {
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .service-card:hover .icon-rotate {
+            transform: rotate(360deg);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #09090b;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #27272a;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D4AF37;
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-gray-100 font-sans overflow-x-hidden">
+
+    <header class="fixed top-0 w-full bg-zinc-950/90 backdrop-blur-md z-50 border-b border-zinc-900/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#home" class="text-xl md:text-2xl font-black tracking-wider text-white flex items-center gap-2">
+                <i class="fa-solid fa-helmet-safety text-gold"></i>
+                <span>ABDO<span class="text-gold"> CONTRACTOR</span></span>
+            </a>
+            
+            <nav class="hidden md:flex space-x-8 text-sm font-semibold tracking-wide uppercase">
+                <a href="#home" class="text-gold transition">Home</a>
+                <a href="#services" class="hover:text-gold text-gray-400 transition">Services</a>
+                <a href="#gallery" class="hover:text-gold text-gray-400 transition">Gallery</a>
+                <a href="#about" class="hover:text-gold text-gray-400 transition">About</a>
+                <a href="#contact" class="hover:text-gold text-gray-400 transition">Contact</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <a href="https://wa.me/966552491514" target="_blank" class="hidden lg:inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-4 py-2 rounded text-xs transition uppercase tracking-wider">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Live
+                </a>
+                <a href="tel:0552491514" class="bg-gold hover:bg-yellow-500 text-black font-black px-4 py-2 rounded text-xs transition uppercase tracking-wider">
+                    Call Now
+                </a>
+                <button id="menuBtn" class="md:hidden text-white focus:outline-none text-2xl ml-2">
+                    <i class="fa-solid fa-bars" id="menuIcon"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobileMenu" class="hidden md:hidden bg-zinc-950/95 border-b border-zinc-900 px-6 py-6 space-y-4 text-center uppercase tracking-wider font-bold text-sm">
+            <a href="#home" class="block text-gold py-2 transition mobile-link">Home</a>
+            <a href="#services" class="block text-gray-300 hover:text-gold py-2 transition mobile-link">Services</a>
+            <a href="#gallery" class="block text-gray-300 hover:text-gold py-2 transition mobile-link">Gallery</a>
+            <a href="#about" class="block text-gray-300 hover:text-gold py-2 transition mobile-link">About</a>
+            <a href="#contact" class="block text-gray-300 hover:text-gold py-2 transition mobile-link">Contact</a>
+            <a href="https://wa.me/966552491514" target="_blank" class="block w-full text-center bg-green-600 text-white py-3 rounded text-xs tracking-widest mt-4">
+                <i class="fa-brands fa-whatsapp mr-1 text-base align-middle"></i> WhatsApp Live
+            </a>
+        </div>
+    </header>
+
+    <section id="home" class="min-h-screen flex items-center justify-center relative pt-16 px-4 overflow-hidden">
+        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-30 pointer-events-none z-0">
+            <source src="khan.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/40 via-zinc-950/30 to-transparent z-10"></div>
+        
+        <div class="relative max-w-5xl mx-auto text-center z-20">
+            <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-gold bg-zinc-900/90 px-4 py-2 rounded-full border border-zinc-800 mb-6 shadow-2xl">
+                <i class="fa-solid fa-star text-gold animate-pulse"></i> Certified Professional Concrete Solutions
+            </span>
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black text-white leading-tight tracking-tight uppercase">
+                Flooring Section <br class="hidden sm:inline">
+                Stamped & <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold to-yellow-500">Foam Concrete</span>
+            </h1>
+            <p class="text-gray-400 text-base sm:text-xl max-w-3xl mx-auto mt-6 mb-10 leading-relaxed">
+                Expert delivery of structural foundations, premium decorative stamped work, warehouse high-level flat screed leveling, and high-performance industrial coating.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#services" class="w-full sm:w-auto bg-gold hover:bg-yellow-500 text-black font-black px-8 py-4 rounded transition text-sm tracking-widest uppercase shadow-lg shadow-gold/20">
+                    Explore Services
+                </a>
+                <a href="https://wa.me/966552491514" target="_blank" class="w-full sm:w-auto bg-zinc-900/80 hover:bg-zinc-800 border border-zinc-800 hover:border-gold px-8 py-4 rounded transition text-sm tracking-widest uppercase flex items-center justify-center gap-3">
+                    <i class="fa-brands fa-whatsapp text-green-500 text-lg"></i> Contact Contractor
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-28 bg-zinc-950 px-4 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20 reveal">
+                <p class="text-xs font-bold text-gold tracking-widest uppercase mb-2">// What We Handle</p>
+                <h2 class="text-3xl md:text-5xl font-black text-white uppercase tracking-tight">Our Premium Services</h2>
+                <div class="w-20 h-1 bg-gold mx-auto mt-4 rounded-full"></div>
+                <p class="text-gray-400 mt-4 max-w-xl mx-auto text-sm">Industrial grade execution across structural engineering layouts and premium aesthetic finishes.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card bg-zinc-900/50 p-8 rounded-xl border border-zinc-900/80 flex flex-col justify-between text-center reveal">
+                    <div>
+                        <div class="w-14 h-14 bg-zinc-950 rounded-lg flex items-center justify-center border border-zinc-800 mb-6 mx-auto">
+                            <i class="icon-rotate fa-solid fa-square-poll-vertical text-gold text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Stamped & Decorative Concrete</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">High-end pattern designs simulating natural stone, bricks, or wood layouts with premium resilience and durability.</p>
+                    </div>
+                    <span class="text-xs text-gold font-bold tracking-widest uppercase mt-6 block">Premium Finish</span>
+                </div>
+
+                <div class="service-card bg-zinc-900/50 p-8 rounded-xl border border-zinc-900/80 flex flex-col justify-between text-center reveal">
+                    <div>
+                        <div class="w-14 h-14 bg-zinc-950 rounded-lg flex items-center justify-center border border-zinc-800 mb-6 mx-auto">
+                            <i class="icon-rotate fa-solid fa-database text-gold text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Foam & Budget Concrete</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Cost-optimized structural mixes, light insulation foam fills, and reliable station concrete solutions tailored perfectly to budgets.</p>
+                    </div>
+                    <span class="text-xs text-gold font-bold tracking-widest uppercase mt-6 block">Structural Fill</span>
+                </div>
+
+                <div class="service-card bg-zinc-900/50 p-8 rounded-xl border border-zinc-900/80 flex flex-col justify-between text-center reveal">
+                    <div>
+                        <div class="w-14 h-14 bg-zinc-950 rounded-lg flex items-center justify-center border border-zinc-800 mb-6 mx-auto">
+                            <i class="icon-rotate fa-solid fa-warehouse text-gold text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Buildings & Warehouses</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Heavy-duty industrial flooring systems engineered intentionally to sustain massive forklift loads and intense operations.</p>
+                    </div>
+                    <span class="text-xs text-gold font-bold tracking-widest uppercase mt-6 block">Industrial Grade</span>
+                </div>
+
+                <div class="service-card bg-zinc-900/50 p-8 rounded-xl border border-zinc-900/80 flex flex-col justify-between text-center reveal">
+                    <div>
+                        <div class="w-14 h-14 bg-zinc-950 rounded-lg flex items-center justify-center border border-zinc-800 mb-6 mx-auto">
+                            <i class="icon-rotate fa-solid fa-arrows-to-dot text-gold text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Level1 Equipment & Helicopter</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Power trowel floor mechanical finishing layouts achieving perfect plane uniformity and ultra-flat surface tolerances.</p>
+                    </div>
+                    <span class="text-xs text-gold font-bold tracking-widest uppercase mt-6 block">Precision Laser</span>
+                </div>
+
+                <div class="service-card bg-zinc-900/50 p-8 rounded-xl border border-zinc-900/80 flex flex-col justify-between text-center reveal">
+                    <div>
+                        <div class="w-14 h-14 bg-zinc-950 rounded-lg flex items-center justify-center border border-zinc-800 mb-6 mx-auto">
+                            <i class="icon-rotate fa-solid fa-road text-gold text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Screed, Asphalt & Sloping</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Accurate layout profiles for complex sloping roof drainage targets, leveling base underlayment, and durable asphalt paving.</p>
+                    </div>
+                    <span class="text-xs text-gold font-bold tracking-widest uppercase mt-6 block">High Precision</span>
+                </div>
+
+                <div class="service-card bg-zinc-900/50 p-8 rounded-xl border border-zinc-900/80 flex flex-col justify-between text-center reveal">
+                    <div>
+                        <div class="w-14 h-14 bg-zinc-950 rounded-lg flex items-center justify-center border border-zinc-800 mb-6 mx-auto">
+                            <i class="icon-rotate fa-solid fa-fill-drip text-gold text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Epoxy Coatings & Finishes</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Seamless protective layer seals, decorative floor paints, anti-slip chemical finishes, and robust dustproof coatings.</p>
+                    </div>
+                    <span class="text-xs text-gold font-bold tracking-widest uppercase mt-6 block">Protective Seal</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-28 bg-zinc-900/40 px-4 border-y border-zinc-900">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <p class="text-xs font-bold text-gold tracking-widest uppercase mb-2">// Visual Proof</p>
+                <h2 class="text-3xl md:text-5xl font-black text-white uppercase tracking-tight">Our Work Gallery</h2>
+                <div class="w-20 h-1 bg-gold mx-auto mt-4 rounded-full"></div>
+                <p class="text-gray-400 mt-4 max-w-xl mx-auto text-sm">Real visual portfolios showcasing architectural stamping, heavy leveling, and decorative chemical finishes.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="group relative overflow-hidden rounded-xl bg-zinc-950 border border-zinc-800/60 reveal">
+                    <img loading="lazy" src="stemped.jpg" alt="Stamped Concrete Work" class="w-full h-72 object-cover group-hover:scale-110 transition duration-500 opacity-75 group-hover:opacity-100">
+                    <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/40 to-transparent flex flex-col justify-end p-6 translate-y-2 group-hover:translate-y-0 transition duration-300">
+                        <span class="text-xs text-gold font-bold tracking-wider uppercase">Decorative Setup</span>
+                        <h4 class="text-lg font-bold text-white mt-1">Premium Stamped Design</h4>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-zinc-950 border border-zinc-800/60 reveal">
+                    <img loading="lazy" src="img5.jpeg" alt="Helicopter Leveling" class="w-full h-72 object-cover group-hover:scale-110 transition duration-500 opacity-75 group-hover:opacity-100">
+                    <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/40 to-transparent flex flex-col justify-end p-6 translate-y-2 group-hover:translate-y-0 transition duration-300">
+                        <span class="text-xs text-gold font-bold tracking-wider uppercase">Industrial Floor</span>
+                        <h4 class="text-lg font-bold text-white mt-1">Power Trowel Finishing</h4>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-zinc-950 border border-zinc-800/60 reveal">
+                    <img loading="lazy" src="img3.jpeg" alt="Epoxy Paint Layout" class="w-full h-72 object-cover group-hover:scale-110 transition duration-500 opacity-75 group-hover:opacity-100">
+                    <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/40 to-transparent flex flex-col justify-end p-6 translate-y-2 group-hover:translate-y-0 transition duration-300">
+                        <span class="text-xs text-gold font-bold tracking-wider uppercase">Chemical Layer</span>
+                        <h4 class="text-lg font-bold text-white mt-1">Glossy Epoxy Coating</h4>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-zinc-950 border border-zinc-800/60 reveal">
+                    <img loading="lazy" src="Warehouses.jpg" alt="Foundation Building" class="w-full h-72 object-cover group-hover:scale-110 transition duration-500 opacity-75 group-hover:opacity-100">
+                    <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/40 to-transparent flex flex-col justify-end p-6 translate-y-2 group-hover:translate-y-0 transition duration-300">
+                        <span class="text-xs text-gold font-bold tracking-wider uppercase">Heavy Infrastructure</span>
+                        <h4 class="text-lg font-bold text-white mt-1">Warehouse Foundation</h4>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-zinc-950 border border-zinc-800/60 reveal">
+                    <img loading="lazy" src="pouring.jpeg" alt="Screed Pouring Work" class="w-full h-72 object-cover group-hover:scale-110 transition duration-500 opacity-75 group-hover:opacity-100">
+                    <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/40 to-transparent flex flex-col justify-end p-6 translate-y-2 group-hover:translate-y-0 transition duration-300">
+                        <span class="text-xs text-gold font-bold tracking-wider uppercase">Screed Leveling</span>
+                        <h4 class="text-lg font-bold text-white mt-1">Precision Site Pouring</h4>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-zinc-950 border border-zinc-800/60 reveal">
+                    <img loading="lazy" src="img6.jpeg" alt="Roof Insulation Work" class="w-full h-72 object-cover group-hover:scale-110 transition duration-500 opacity-75 group-hover:opacity-100">
+                    <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/40 to-transparent flex flex-col justify-end p-6 translate-y-2 group-hover:translate-y-0 transition duration-300">
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-zinc-950 px-4 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto text-center reveal relative z-10">
+            <div class="inline-flex w-16 h-16 bg-zinc-900 rounded-full items-center justify-center border border-zinc-800 mb-6 shadow-xl shadow-gold/5">
+                <i class="fa-solid fa-quote-left text-gold text-2xl"></i>
+            </div>
+            <h2 class="text-2xl sm:text-4xl font-black text-white uppercase tracking-tight mb-6">
+                Decorative Finishing Concrete <br>
+                <span class="text-gold">— With or Without Materials</span>
+            </h2>
+            <p class="text-gray-300 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto font-medium">
+                "We carry out all forms of professional engineering floor styles, structural concrete casting, and premium industrial finishes tailored completely to your architectural scope. Contracts are executed cleanly using premium materials or labor-only scopes based strictly on developer demands."
+            </p>
+            
+            <div class="mt-10 flex flex-wrap justify-center items-center gap-6">
+                <div class="bg-zinc-900/90 px-6 py-3 rounded-lg border border-zinc-800 text-left">
+                    <span class="text-xs text-gray-500 uppercase block tracking-wider font-bold">Main Contractor</span>
+                    <span class="text-white font-black text-base tracking-wide">Abdo</span>
+                </div>
+                <div class="bg-zinc-900/90 px-6 py-3 rounded-lg border border-zinc-800 text-left">
+                    <span class="text-xs text-gray-500 uppercase block tracking-wider font-bold">Inquiry Line</span>
+                    <span class="text-gold font-black text-base tracking-wide">055 249 1514</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-28 bg-zinc-900/40 px-4 relative border-t border-zinc-900">
+        <div class="max-w-3xl mx-auto relative z-10">
+            <div class="text-center mb-14 reveal">
+                <p class="text-xs font-bold text-gold tracking-widest uppercase mb-2">// Instant Booking</p>
+                <h2 class="text-3xl md:text-5xl font-black text-white uppercase tracking-tight">Request Free Quote</h2>
+                <p class="text-gray-400 mt-3 text-sm">Fill your specifications and tap submit. This automatically structures your details for quick WhatsApp confirmation.</p>
+            </div>
+
+            <div class="bg-zinc-950 p-8 sm:p-10 rounded-2xl border border-zinc-800/80 shadow-2xl reveal">
+                <form id="whatsappForm" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Your Full Name *</label>
+                            <input type="text" id="formName" required class="w-full bg-zinc-900 border border-zinc-800 focus:border-gold rounded-lg p-3.5 text-white outline-none transition text-sm font-medium">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Project Site Location *</label>
+                            <input type="text" id="formLocation" required class="w-full bg-zinc-900 border border-zinc-800 focus:border-gold rounded-lg p-3.5 text-white outline-none transition text-sm font-medium">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Select Service Specialty</label>
+                            <select id="formService" class="w-full bg-zinc-900 border border-zinc-800 focus:border-gold rounded-lg p-3.5 text-white outline-none transition text-sm font-medium">
+                                <option value="Stamped & Decorative Concrete">Stamped & Decorative Concrete</option>
+                                <option value="Foam & Budget Insulation Fill">Foam & Budget Insulation Fill</option>
+                                <option value="Warehouse Heavy Flat Floor">Warehouse Heavy Flat Floor</option>
+                                <option value="Helicopter Leveling Finishing">Helicopter Leveling Finishing</option>
+                                <option value="Screed / Asphalt / Roof Sloping">Screed / Asphalt / Roof Sloping</option>
+                                <option value="Epoxy Coating Paint Work">Epoxy Coating Paint Work</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Scope Options</label>
+                            <select id="formScope" class="w-full bg-zinc-900 border border-zinc-800 focus:border-gold rounded-lg p-3.5 text-white outline-none transition text-sm font-medium">
+                                <option value="With Materials included">Complete (With Materials)</option>
+                                <option value="Labor scope only (Without Materials)">Labor Work Only (Without Materials)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Additional Specifications / Dimensions</label>
+                        <textarea id="formMessage" rows="4" placeholder="Mention approx square meters or target timeline..." class="w-full bg-zinc-900 border border-zinc-800 focus:border-gold rounded-lg p-3.5 text-white outline-none transition text-sm font-medium"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-green-600 hover:bg-green-500 text-white font-black p-4 rounded-lg transition text-sm tracking-widest uppercase flex items-center justify-center gap-3 shadow-lg shadow-green-600/10">
+                        <i class="fa-brands fa-whatsapp text-xl"></i> Submit 
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-zinc-950 py-12 border-t border-zinc-900 text-xs text-gray-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            
+            <div class="text-center md:text-left">
+                <p class="text-sm font-black text-white uppercase tracking-wider mb-1">ABDO FLOORING SECTION</p>
+                <p class="text-gray-600 font-medium">Premium Concrete Finishing & Engineering Contracting Architecture.</p>
+              
+                <p class="font-bold mt-2 text-[11px] tracking-widest uppercase text-white">
+                Website Created by
+                <a href="https://salmankhanweb.netlify.app/" class="text-gold/80 hover:text-gold">
+                Salman Khan
+                </a>
+                </p>
+            </div>
+
+            <div class="flex items-center gap-4 text-sm">
+                <a href="https://wa.me/966552491514" target="_blank" class="w-10 h-10 bg-zinc-900 rounded-full flex items-center justify-center text-gray-400 hover:text-green-500 border border-zinc-800 hover:border-green-500/50 transition duration-300">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="tel:0552491514" class="w-10 h-10 bg-zinc-900 rounded-full flex items-center justify-center text-gray-400 hover:text-gold border border-zinc-800 hover:border-gold/50 transition duration-300">
+                    <i class="fa-solid fa-phone"></i>
+                </a>
+                <a href="#" class="w-10 h-10 bg-zinc-900 rounded-full flex items-center justify-center text-gray-400 hover:text-gold border border-zinc-800 hover:border-gold/50 transition duration-300">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#" class="w-10 h-10 bg-zinc-900 rounded-full flex items-center justify-center text-gray-400 hover:text-gold border border-zinc-800 hover:border-gold/50 transition duration-300">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+            </div>
+
+            <div class="text-center md:text-right font-medium text-gray-600">
+                &copy; 2026 Abdo Concrete. All rights reserved. Registered Private Contractor.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // High-Performance Intersection Observer Animation Setup
+        document.addEventListener("DOMContentLoaded", () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+        });
+
+        // Mobile Responsive Toggle Trigger Menu Logic
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = document.getElementById('menuIcon');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if(mobileMenu.classList.contains('hidden')) {
+                menuIcon.className = "fa-solid fa-bars";
+            } else {
+                menuIcon.className = "fa-solid fa-xmark";
+            }
+        });
+
+        // Hide drawer upon clicking internal link items
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.className = "fa-solid fa-bars";
+            });
+        });
+
+        // Standard Safe Form Action URL Transformer
+        document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('formName').value.trim();
+            const location = document.getElementById('formLocation').value.trim();
+            const service = document.getElementById('formService').value;
+            const scope = document.getElementById('formScope').value;
+            const extra = document.getElementById('formMessage').value.trim();
+
+            let text = `Hello Contractor Abdo,\n\n`;
+            text += `I would like to request a quote for concrete work:\n`;
+            text += `• Name: ${name}\n`;
+            text += `• Location: ${location}\n`;
+            text += `• Service: ${service}\n`;
+            text += `• Scope: ${scope}`;
+            
+            if(extra.length > 0) {
+                text += `\n• Details: ${extra}`;
+            }
+
+            const targetURL = `https://wa.me/966552491514?text=${encodeURIComponent(text)}`;
+            window.open(targetURL, '_blank');
+        });
+    </script>
+</body>
+</html>
